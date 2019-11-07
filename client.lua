@@ -144,10 +144,10 @@ AddEventHandler("omni_mout_builder:enable", function(x, y, z, range)
     EnableGui(true)
 end)
 
--- RegisterCommand("build_menu", function()
---     local pos = GetEntityCoords(PlayerPedId())
---     TriggerEvent("omni_mout_builder:enable", pos.x, pos.y, pos.z, 10000.0)
--- end, false)
+RegisterCommand("build_menu", function()
+    local pos = GetEntityCoords(PlayerPedId())
+    TriggerEvent("omni_mout_builder:enable", pos.x, pos.y, pos.z, 10000.0)
+end, false)
 
 Citizen.CreateThread(function()
     while true do
