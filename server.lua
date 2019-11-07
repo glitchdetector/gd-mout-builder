@@ -1,0 +1,5 @@
+RegisterServerEvent("omni_mout_builder:confirmedProp")
+AddEventHandler("omni_mout_builder:confirmedProp", function(data)
+    TriggerClientEvent("omni_mout_builder:placeProp", -1, data)
+    -- TriggerEvent("omni_factions:addProp", source, data)
+end)
